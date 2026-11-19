@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team | Sigma Café</title>
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><img src="../assets/images/logo.svg" alt="">Sigma Café</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="bill.html">Split the bill</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="team.html" aria-current="page">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="tile-strip" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="page-title title-row">
+      <div>
+        <h1>Meet the team</h1>
+        <p>The people who make your morning cup.</p>
+      </div>
+      <a class="btn btn-light" href="#join">Join the team</a>
+    </section>
+
+    <div class="toolbar">
+      <button id="sort" class="btn" type="button">Sort A to Z</button>
+    </div>
+
+    <section id="team-list" class="card-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>Sigma Café is a practice project for the Sigma School Debug Lab.</p>
+  </footer>
+
+  <script src="../data/staff.js"></script>
+  <script src="../js/team.js"></script>
+</body>
+</html>

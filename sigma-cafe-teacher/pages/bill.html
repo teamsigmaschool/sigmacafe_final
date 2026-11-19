@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Split the bill | Sigma Café</title>
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><img src="../assets/images/logo.svg" alt="">Sigma Café</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="bill.html" aria-current="page">Split the bill</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="tile-strip" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Split the bill</h1>
+      <p>Enter what you owe, pick a tip and see what each person pays.</p>
+    </section>
+
+    <section class="split">
+      <form class="panel" onsubmit="return false">
+        <div class="field">
+          <label for="bill">Bill amount (RM)</label>
+          <input id="bill" type="number" min="0" step="0.01" placeholder="80">
+        </div>
+        <div class="field">
+          <label for="tip">Tip</label>
+          <select id="tip">
+            <option value="0">No tip</option>
+            <option value="10">10%</option>
+            <option value="15" selected>15%</option>
+            <option value="20">20%</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="people">Number of people</label>
+          <input id="people" type="number" min="1" step="1" value="2">
+        </div>
+        <button id="calc" class="btn" type="button">Calculate</button>
+        <p id="message" class="form-message" role="status"></p>
+      </form>
+
+      <section class="receipt" aria-label="Receipt">
+        <h2>SIGMA CAFÉ</h2>
+        <dl>
+          <div class="row"><dt>Bill</dt><dd id="r-bill">RM 0.00</dd></div>
+          <div class="row"><dt id="r-tip-label">Tip</dt><dd id="r-tip">RM 0.00</dd></div>
+          <div class="row total"><dt>Total</dt><dd id="r-total">RM 0.00</dd></div>
+          <div class="row each"><dt>Each person pays</dt><dd id="r-each">RM 0.00</dd></div>
+        </dl>
+      </section>
+    </section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>Sigma Café is a practice project for the Sigma School Debug Lab.</p>
+  </footer>
+
+  <script src="../lib/rounding.js"></script>
+  <script src="../js/bill.js"></script>
+</body>
+</html>

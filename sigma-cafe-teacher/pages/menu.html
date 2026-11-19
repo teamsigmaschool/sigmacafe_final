@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Sigma Café</title>
+  <link rel="icon" href="../assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html"><img src="../assets/images/logo.svg" alt="">Sigma Café</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="bill.html">Split the bill</a></li>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="tile-strip" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Menu</h1>
+      <p>Everything is made fresh each morning. Pick a category to narrow it down.</p>
+    </section>
+
+    <div class="filters" role="group" aria-label="Filter by category">
+      <button class="chip">
+        All
+      </button>
+      <button class="chip">
+        Coffee
+      </button>
+      <button class="chip">
+        Tea
+      </button>
+      <button class="chip">
+        Food
+      </button>
+    </div>
+
+    <section id="menu-list" class="card-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>Sigma Café is a practice project for the Sigma School Debug Lab.</p>
+  </footer>
+
+  <script src="../data/menu.js"></script>
+  <script src="../js/menu.js"></script>
+</body>
+</html>

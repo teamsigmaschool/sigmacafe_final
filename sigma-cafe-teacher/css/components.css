@@ -1,0 +1,381 @@
+/* components.css: navigation, buttons, forms, cards and the page-specific bits */
+
+/* ---------- Navigation ---------- */
+.site-header {
+  background: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  padding-block: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 38px;
+  height: 38px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 700;
+  padding-block: 0.25rem;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom-color: var(--teal);
+}
+
+.nav-links a[aria-current="page"] {
+  border-bottom-color: var(--red);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  color: var(--paper);
+  background: var(--teal);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 0.7rem 1.4rem;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn:hover {
+  background: var(--teal-dark);
+}
+
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.btn-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.btn-light:hover {
+  background: var(--sugar);
+}
+
+/* ---------- Home ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 3rem;
+}
+
+.hero p {
+  margin-block: 1rem 1.75rem;
+  max-width: 44ch;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 360px;
+  justify-self: center;
+}
+
+.lab-note {
+  background: var(--sugar);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.25rem;
+  font-weight: 500;
+}
+
+.signboards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding-block: 2rem 3.5rem;
+}
+
+.signboard {
+  display: block;
+  text-decoration: none;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.4rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.signboard:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--red);
+}
+
+.signboard h2 {
+  margin-bottom: 0.35rem;
+}
+
+.signboard p {
+  color: var(--ink-soft);
+}
+
+/* ---------- Panels and forms ---------- */
+.panel {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.field + .field {
+  margin-top: 1rem;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  font: inherit;
+  color: var(--ink);
+  background: var(--tile);
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+}
+
+.panel .btn {
+  margin-top: 1.5rem;
+}
+
+.form-message {
+  margin-top: 0.75rem;
+  color: var(--red);
+  font-weight: 700;
+  min-height: 1.6em;
+}
+
+/* ---------- Split the Bill ---------- */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 3.5rem;
+  align-items: start;
+}
+
+.receipt {
+  background: var(--paper);
+  border: 2px dashed var(--ink);
+  padding: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.receipt h2 {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 1.15rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px dashed var(--ink);
+}
+
+.receipt dl {
+  margin: 1rem 0 0;
+}
+
+.receipt .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.35rem;
+}
+
+.receipt dt,
+.receipt dd {
+  margin: 0;
+}
+
+.receipt .row.total {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 2px dashed var(--ink);
+  font-weight: 700;
+}
+
+.receipt .row.each {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* ---------- Menu ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+  transition: background 0.1s ease;
+}
+
+.chip:hover {
+  background: var(--sugar);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.card-grid > .empty {
+  grid-column: 1 / -1;
+}
+
+.item {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 1.25rem;
+}
+
+.item .icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+.item .desc {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+.item .price {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.empty {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/* ---------- Team ---------- */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.toolbar {
+  margin-bottom: 1.5rem;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.25rem;
+}
+
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.person h3 {
+  font-size: 1.15rem;
+}
+
+.person .role {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding-block: 1.5rem 2.5rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 720px) {
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}

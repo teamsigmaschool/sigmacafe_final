@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Sigma Café</title>
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img src="assets/images/logo.svg" alt="">Sigma Café</a>
+      <nav aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="pages/bill.html">Split the bill</a></li>
+          <li><a href="pages/menu.html">Menu</a></li>
+          <li><a href="pages/team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="tile-strip" aria-hidden="true"></div>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Kopi, teh tarik and a calculator for the bill.</h1>
+        <p>A tiny café website with three working pages. Well, three pages that should be working.</p>
+        <div class="hero-actions">
+          <a class="btn" href="pages/menu.html">See the menu</a>
+          <a class="btn btn-light" href="pages/bill.html">Split a bill</a>
+        </div>
+      </div>
+      <img src="assets/images/hero-cup.svg" alt="An enamel mug of coffee with steam rising">
+    </section>
+
+    <p class="lab-note">Debug Lab: each page below has one bug. Open the console (F12) before you start.</p>
+
+    <section class="signboards" aria-label="Pages">
+      <a class="signboard" href="pages/bill.html">
+        <h2>Split the bill</h2>
+        <p>Add a tip and share the total between friends.</p>
+      </a>
+      <a class="signboard" href="pages/menu.html">
+        <h2>Menu</h2>
+        <p>Browse drinks and food. Filter by category.</p>
+      </a>
+      <a class="signboard" href="pages/team.html">
+        <h2>Team</h2>
+        <p>Meet the people behind the counter.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="container site-footer">
+    <p>Sigma Café is a practice project for the Sigma School Debug Lab.</p>
+  </footer>
+
+
+</body>
+</html>
